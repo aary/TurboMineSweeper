@@ -5,6 +5,7 @@ Mid semester high school project that uses a depth first outward expansion algor
 
 Named "TurboMineSweeper" to show the fact that this project was initially programmed in the compiler cum IDE known as Turbo C++ (:D) MS-DOS :D :D
 
+<img src = "image.png" height = 400 width = 400*1100/1300>
 <br>
 
 ######How to run
