@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "touchdowntile.PNG"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "touchdowntile-1.PNG"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "touchdowntile-2.PNG"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
