@@ -10,6 +10,7 @@
 #import "MineMap.h"
 
 @interface MinesweeperGame : NSObject
+// OVERVIEW : The game class for a game of Minesweeper
 
 // Default Constructor
 // EFFECTS : Constructs a game with the specified dimensions and mines
@@ -22,6 +23,14 @@
 //           and the tile was a COUNTERTILE then a recursive search is executed that reveals all
 //           neighboring COUNTERTILEs with 0 count until a COUNTERTILE with a non-zero count is hit
 -(void) revealTileAtRow:(NSUInteger)row andColumn:(NSInteger)column;
+
+// MODIFIES : self
+// EFFECTS : Resets the entire game and constructs a new minemap
+-(void) resetGameWithDimensions:(NSUInteger)dimensions andMines:(NSUInteger)mines;
+
+// MODIFIES : self
+// EFFECTS : Resets the entire game with the same dimensions and mines
+-(void) resetGame;
 
 @property (nonatomic, getter=isGameOver, readonly) BOOL gameOver;   // YES if the game is over
 @property (nonatomic) NSUInteger dimensions;                        // The dimensions of the map
