@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minesweeper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaQ-VI-Q1W">
+                                <rect key="frame" x="112" y="20" width="151" height="57"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efr-Mf-HrU">
+                                <rect key="frame" x="172" y="111" width="30" height="30"/>
+                                <state key="normal" title="😃" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jj-29-aTm">
+                                <rect key="frame" x="210" y="115" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5J-sa-wau">
+                                <rect key="frame" x="125" y="115" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best time: 00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpP-rT-iOV">
+                                <rect key="frame" x="37" y="537" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEe-xa-pok">
+                                <rect key="frame" x="172" y="157" width="30" height="30"/>
+                                <state key="normal" title="🚩" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enableFlagMode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Pj3-e1-P4v"/>
+                                    <action selector="toggleFlagMode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ykg-zl-8Je"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhp-iD-G2Y">
+                                <rect key="frame" x="37" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gBF-7M-BnR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8y-we-7l2">
+                                <rect key="frame" x="67" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lZP-mE-Nji"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t60-ug-NkN">
+                                <rect key="frame" x="97" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cg3-do-u8u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1v-f3-dKH">
+                                <rect key="frame" x="127" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZkW-y3-MdI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85t-1n-xV6">
+                                <rect key="frame" x="157" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jFY-Cw-U3N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSt-a5-NLU">
+                                <rect key="frame" x="187" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gey-FX-Ifd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X19-XK-UJ5">
+                                <rect key="frame" x="217" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Gp-pf-cdQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ux-ds-mxB">
+                                <rect key="frame" x="247" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1sb-3D-J59"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iec-f0-zKi">
+                                <rect key="frame" x="277" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F33-K2-sJa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47F-6S-KHW">
+                                <rect key="frame" x="37" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NMJ-DT-PTm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcm-OW-Cya">
+                                <rect key="frame" x="67" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8bu-2F-AjZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-P9-OeJ">
+                                <rect key="frame" x="97" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sIl-cX-CCQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYW-JS-vvi">
+                                <rect key="frame" x="127" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ijS-ag-XG8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxo-hx-SK0">
+                                <rect key="frame" x="157" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZaE-L4-28d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azQ-Fp-we7">
+                                <rect key="frame" x="187" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="r74-Rk-jMK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmi-yy-JFS">
+                                <rect key="frame" x="217" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g37-KX-OMz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPg-WN-XLX">
+                                <rect key="frame" x="247" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="38M-HR-SL6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBJ-ap-eKL">
+                                <rect key="frame" x="277" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="moW-IH-Rc8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v98-Cv-y6O">
+                                <rect key="frame" x="37" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2aV-vt-1JL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yim-Dq-Y9X">
+                                <rect key="frame" x="67" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0AN-3s-eDR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75W-FW-R3z">
+                                <rect key="frame" x="97" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2x1-kn-NkE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuT-cn-EON">
+                                <rect key="frame" x="127" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gwd-FL-4Op"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-hg-IHQ">
+                                <rect key="frame" x="157" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="T06-L0-kxS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwP-kp-gku">
+                                <rect key="frame" x="187" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gaz-SF-Bef"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAm-cK-qwJ">
+                                <rect key="frame" x="217" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UgQ-mb-s65"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5l-HC-TDa">
+                                <rect key="frame" x="247" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L0A-Rm-vxg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZR-Y3-H0D">
+                                <rect key="frame" x="277" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jYw-Pp-suO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl2-tF-tMA">
+                                <rect key="frame" x="37" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="quf-u5-iY7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8t6-Ym-R6e">
+                                <rect key="frame" x="67" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iGR-78-Xz0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCi-T3-al6">
+                                <rect key="frame" x="97" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PK3-7X-37M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ay-A9-kTN">
+                                <rect key="frame" x="127" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CxB-JO-ovX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYd-yX-gtO">
+                                <rect key="frame" x="157" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lHs-40-h8V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PF-C0-E8N">
+                                <rect key="frame" x="187" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Y9z-ea-PwH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-Mp-UJi">
+                                <rect key="frame" x="217" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qkF-Oo-Y4I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ6-9D-dPx">
+                                <rect key="frame" x="247" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fWh-7Q-elA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBH-uN-NnA">
+                                <rect key="frame" x="277" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IdR-rU-uyg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipi-pM-bdj">
+                                <rect key="frame" x="37" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mwy-YM-VxP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5s-sA-5kv">
+                                <rect key="frame" x="67" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Eid-Uy-ej0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ4-Bv-P2i">
+                                <rect key="frame" x="97" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8D0-YM-B5m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fer-mx-uHb">
+                                <rect key="frame" x="127" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cmT-mf-8OA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ob-57-KP0">
+                                <rect key="frame" x="157" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WBq-pe-66M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2e-B1-E4U">
+                                <rect key="frame" x="187" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e41-WR-KhL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E69-6E-nAi">
+                                <rect key="frame" x="217" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BUG-Ct-WQq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh0-Ce-ISb">
+                                <rect key="frame" x="247" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MqC-ey-6Mn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jd-gf-dcH">
+                                <rect key="frame" x="277" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HtO-bk-bnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxu-pX-R1G">
+                                <rect key="frame" x="37" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H8S-jB-CTK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcy-IU-L4u">
+                                <rect key="frame" x="67" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MiK-d5-10D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgm-MP-yRL">
+                                <rect key="frame" x="97" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vrA-T8-o2C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3m-1h-rsl">
+                                <rect key="frame" x="127" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="V1S-3u-acs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEG-0J-wM2">
+                                <rect key="frame" x="157" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3ff-7p-Vph"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAJ-By-yxS">
+                                <rect key="frame" x="187" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="il4-iC-zaQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECY-id-hzK">
+                                <rect key="frame" x="217" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2js-0Y-2Oi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVf-fi-OrA">
+                                <rect key="frame" x="247" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lzy-Tv-xm7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCR-NK-1FE">
+                                <rect key="frame" x="277" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IqG-hZ-H6E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeZ-vg-XrQ">
+                                <rect key="frame" x="37" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Yg-Eg-0ah"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNe-fm-ZTT">
+                                <rect key="frame" x="67" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4DZ-g9-SHl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrs-T6-stH">
+                                <rect key="frame" x="97" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="shj-fO-nto"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJZ-Vf-RjV">
+                                <rect key="frame" x="127" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aQv-10-epH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-fC-GvE">
+                                <rect key="frame" x="157" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K2J-tn-fDC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qp-dQ-S37">
+                                <rect key="frame" x="187" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="00t-pG-6t2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs9-zZ-gne">
+                                <rect key="frame" x="217" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mlX-GX-6bb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBi-gi-neD">
+                                <rect key="frame" x="247" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YP7-76-LUc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwH-XI-gw8">
+                                <rect key="frame" x="277" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bOa-tK-Ycu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3H-bL-UMU">
+                                <rect key="frame" x="37" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DHU-Tx-khc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzY-vs-JRH">
+                                <rect key="frame" x="67" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="X2r-17-lNC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pp-tE-bv8">
+                                <rect key="frame" x="97" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="di7-eK-gWt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltv-yH-Bsz">
+                                <rect key="frame" x="127" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NhD-Ia-1Wo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlB-ah-FsZ">
+                                <rect key="frame" x="157" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kkb-y3-ogR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1d-xZ-Jdt">
+                                <rect key="frame" x="187" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K0t-7P-kek"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsb-1t-Uip">
+                                <rect key="frame" x="217" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rH0-hK-Hs4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUM-y9-jhs">
+                                <rect key="frame" x="247" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d30-Te-1Fa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOv-3E-w6j">
+                                <rect key="frame" x="277" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QYo-f9-1Ha"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyw-Yx-SOS">
+                                <rect key="frame" x="37" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rzU-Oh-WgE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZB-4l-mhN">
+                                <rect key="frame" x="67" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gPT-1u-K3u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40z-i1-e3c">
+                                <rect key="frame" x="97" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8fQ-UX-iB8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-k7-hSf">
+                                <rect key="frame" x="127" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UTF-Ab-UfH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnw-U2-82a">
+                                <rect key="frame" x="157" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h1u-EZ-AbN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sz8-HP-43f">
+                                <rect key="frame" x="187" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IET-hu-TJC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDv-oH-oRf">
+                                <rect key="frame" x="217" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fat-RT-OdT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brt-f1-PeB">
+                                <rect key="frame" x="247" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wkE-Ga-cuU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdH-YR-wQ6">
+                                <rect key="frame" x="277" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tSc-io-IGI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W55-jm-0Qr">
+                                <rect key="frame" x="37" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PbL-Q4-IZp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhI-nD-DXi">
+                                <rect key="frame" x="67" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pDx-Ih-zHU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8M-ik-hAp">
+                                <rect key="frame" x="97" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QA6-aO-4Oa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI6-tG-1Ni">
+                                <rect key="frame" x="127" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bFN-4m-QE5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-uP-TVv">
+                                <rect key="frame" x="157" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GBt-NE-9i6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Iy-yk-1qS">
+                                <rect key="frame" x="187" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="P5i-Ln-Apf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwO-Tm-H14">
+                                <rect key="frame" x="217" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Psj-xb-Fhd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3C-4f-ivF">
+                                <rect key="frame" x="277" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rxm-Wn-5Y0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sp-Ox-GTL">
+                                <rect key="frame" x="307" y="201" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2gg-vd-zNt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEa-Dh-GML">
+                                <rect key="frame" x="307" y="232" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xNK-IZ-Srq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbY-dk-ln2">
+                                <rect key="frame" x="307" y="263" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cry-2J-mEX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZI-zQ-dm6">
+                                <rect key="frame" x="307" y="294" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xuc-4H-Qwz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZU-lP-wi5">
+                                <rect key="frame" x="307" y="325" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8q7-qH-Mp2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUz-7u-DPz">
+                                <rect key="frame" x="307" y="356" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5XK-u4-Clc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUL-Ai-WdX">
+                                <rect key="frame" x="307" y="387" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sdV-to-qUM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmw-VB-LCz">
+                                <rect key="frame" x="307" y="418" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g7O-oB-VQO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHI-XL-Vb0">
+                                <rect key="frame" x="307" y="448" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mg9-al-fo6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YV-hA-ysf">
+                                <rect key="frame" x="307" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z3x-F2-a73"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scs-LV-6fh">
+                                <rect key="frame" x="247" y="478" width="30" height="30"/>
+                                <state key="normal" backgroundImage="tile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchMineButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Jmh-wE-yqe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myView" destination="kh9-bI-dsS" id="2C1-Uf-OK5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1375.5" y="-216.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tile" width="77" height="77"/>
+    </resources>
+</document>
