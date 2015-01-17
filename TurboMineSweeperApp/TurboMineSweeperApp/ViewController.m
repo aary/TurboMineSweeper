@@ -52,7 +52,7 @@
         x = 37;
     }
     
-    printf("Size of array %ld\n", (long)[self.mineButtons count]);
+    printf("Size of array %ld\n", (unsigned long)[self.mineButtons count]);
     
     /*for (x) {
      for (y) {
