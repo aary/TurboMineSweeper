@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MinesweeperGame.h"
 
 @interface ViewController : UIViewController
 
-// A property containing the minesweeper game
-@property(strong, nonatomic) MinesweeperGame* game;
 
 @end
 

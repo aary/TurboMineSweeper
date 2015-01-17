@@ -13,12 +13,11 @@
 // OVERVIEW : A tile class that contains the different tile states a tile can have
 
 // The possible states of the tile
-enum _TileState {COUNTERTILE, MINE};
+enum _TileState {COUNTERTILE, FLAG, MINE};
 typedef char TileState;                                     // Typedef for memory efficiency
 
 @property (nonatomic) TileState tileState;                  // The state of the tile, a _tileState
 @property (nonatomic, getter=isRevealed) BOOL revealed;     // Whether the tile is revealed or not
-@property (nonatomic, getter=isFlagged) BOOL flagged;       // Whether a flag has been set at the location
 @property (nonatomic) NSInteger count;                      // The number of tiles around the tile
 
 @end
@@ -39,9 +38,6 @@ typedef char TileState;                                     // Typedef for memor
 
 @property (nonatomic) NSUInteger numberOfMines; // The number of mines in the map
 @property (nonatomic) NSUInteger dimensions;    // The dimensions of the map
-
-// Returns the NSArray containing the locations of the mines in the map
--(NSArray *) mineLocations;
 
 @end
 //*********************************************************************************

@@ -33,8 +33,6 @@
 // EFFECTS : Inserts a mine in the map at the specified location
 -(void) insertMineAtRow:(NSUInteger)xCoordinate andColumn:(NSUInteger)yCoordinate;
 
-@property (strong, nonatomic) NSMutableArray* mineLocationsArray; // of pairs of integers
-
 @end
 //**************************PRIVATE INTERFACE MINEMAP**********************************
 
@@ -51,16 +49,11 @@
     return nil;
 }
 
+
 - (NSMutableArray *) map {
 // Getter for the map
     if (!_map) _map = [[NSMutableArray alloc] init];
     return _map;
-}
-
--(NSMutableArray *) mineLocationsArray {
-// Getter for the mine locations
-    if (!_mineLocationsArray) _mineLocationsArray = [[NSMutableArray alloc] init];
-    return _mineLocationsArray;
 }
 
 
@@ -78,7 +71,6 @@
         // Initialize empty map with empty tiles
         self.map = [[NSMutableArray alloc] initWithCapacity:dimensionsIn];
         for (int i = 0; i < dimensionsIn; ++i) {
-            
             // Preallcoation for effieciency
             [self.map addObject:[[NSMutableArray alloc] initWithCapacity:dimensionsIn]];
             
@@ -91,18 +83,13 @@
         // Populate map with mines placed in random locations
         NSUInteger xCoordinate, yCoordinate;
         for (int i = 0; i < mines; ++i) {
-            
             // Find empty location to put a mine in the map
             do {
                 xCoordinate = arc4random() % dimensionsIn;
                 yCoordinate = arc4random() % dimensionsIn;
             } while ([self.map[xCoordinate][yCoordinate] tileState] == MINE);
             
-            
-            // Insert mine
             [self insertMineAtRow:xCoordinate andColumn:yCoordinate];
-            [self.mineLocationsArray addObject:
-                @[[NSNumber numberWithInteger:xCoordinate], [NSNumber numberWithInteger:yCoordinate]]];
         }
         
 #ifdef DEBUG_MINEMAP
@@ -150,10 +137,6 @@
     //[self   tileAtRow:(xCoordinate + 1) andColumn:(yCoordinate - 1)].tileState  = COUNTERTILE;
     ++[self tileAtRow:(xCoordinate)     andColumn:(yCoordinate - 1)].count;
     //[self   tileAtRow:(xCoordinate)     andColumn:(yCoordinate - 1)].tileState  = COUNTERTILE;
-}
-
--(NSArray *) mineLocations {
-    return self.mineLocationsArray;
 }
 
 @end

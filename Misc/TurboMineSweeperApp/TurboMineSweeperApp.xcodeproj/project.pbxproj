@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		484E01EF1A56DBBF001FB72C /* MineMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 484E01EE1A56DBBF001FB72C /* MineMap.m */; };
+		48D182F11A57002000506E71 /* MinesweeperGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D182F01A57002000506E71 /* MinesweeperGame.m */; };
+		48F82FDA1A56BD220020B8AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F82FD91A56BD220020B8AF /* main.m */; };
+		48F82FDD1A56BD220020B8AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F82FDC1A56BD220020B8AF /* AppDelegate.m */; };
+		48F82FE01A56BD220020B8AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F82FDF1A56BD220020B8AF /* ViewController.m */; };
+		48F82FE31A56BD220020B8AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F82FE11A56BD220020B8AF /* Main.storyboard */; };
+		48F82FE51A56BD220020B8AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F82FE41A56BD220020B8AF /* Images.xcassets */; };
+		48F82FE81A56BD220020B8AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48F82FE61A56BD220020B8AF /* LaunchScreen.xib */; };
+		48F82FF41A56BD220020B8AF /* TurboMineSweeperAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F82FF31A56BD220020B8AF /* TurboMineSweeperAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48F82FEE1A56BD220020B8AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48F82FCC1A56BD210020B8AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48F82FD31A56BD220020B8AF;
+			remoteInfo = TurboMineSweeperApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		484E01ED1A56DBBF001FB72C /* MineMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineMap.h; path = Model/MineMap.h; sourceTree = "<group>"; };
+		484E01EE1A56DBBF001FB72C /* MineMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineMap.m; path = Model/MineMap.m; sourceTree = "<group>"; };
+		48D182EF1A57002000506E71 /* MinesweeperGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinesweeperGame.h; path = Model/MinesweeperGame.h; sourceTree = "<group>"; };
+		48D182F01A57002000506E71 /* MinesweeperGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MinesweeperGame.m; path = Model/MinesweeperGame.m; sourceTree = "<group>"; };
+		48F82FD41A56BD220020B8AF /* TurboMineSweeperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurboMineSweeperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F82FD81A56BD220020B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48F82FD91A56BD220020B8AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48F82FDB1A56BD220020B8AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		48F82FDC1A56BD220020B8AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		48F82FDE1A56BD220020B8AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48F82FDF1A56BD220020B8AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48F82FE21A56BD220020B8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48F82FE41A56BD220020B8AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		48F82FE71A56BD220020B8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		48F82FED1A56BD220020B8AF /* TurboMineSweeperAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurboMineSweeperAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F82FF21A56BD220020B8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48F82FF31A56BD220020B8AF /* TurboMineSweeperAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TurboMineSweeperAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48F82FD11A56BD220020B8AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48F82FEA1A56BD220020B8AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		484E01F01A56DBD2001FB72C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				484E01ED1A56DBBF001FB72C /* MineMap.h */,
+				484E01EE1A56DBBF001FB72C /* MineMap.m */,
+				48D182EF1A57002000506E71 /* MinesweeperGame.h */,
+				48D182F01A57002000506E71 /* MinesweeperGame.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		48F82FCB1A56BD210020B8AF = {
+			isa = PBXGroup;
+			children = (
+				48F82FD61A56BD220020B8AF /* TurboMineSweeperApp */,
+				48F82FF01A56BD220020B8AF /* TurboMineSweeperAppTests */,
+				48F82FD51A56BD220020B8AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48F82FD51A56BD220020B8AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48F82FD41A56BD220020B8AF /* TurboMineSweeperApp.app */,
+				48F82FED1A56BD220020B8AF /* TurboMineSweeperAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48F82FD61A56BD220020B8AF /* TurboMineSweeperApp */ = {
+			isa = PBXGroup;
+			children = (
+				48F82FDE1A56BD220020B8AF /* ViewController.h */,
+				48F82FDF1A56BD220020B8AF /* ViewController.m */,
+				48F82FE11A56BD220020B8AF /* Main.storyboard */,
+				48F82FE41A56BD220020B8AF /* Images.xcassets */,
+				48F82FE61A56BD220020B8AF /* LaunchScreen.xib */,
+				484E01F01A56DBD2001FB72C /* Model */,
+				48F82FD71A56BD220020B8AF /* Supporting Files */,
+			);
+			path = TurboMineSweeperApp;
+			sourceTree = "<group>";
+		};
+		48F82FD71A56BD220020B8AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48F82FDB1A56BD220020B8AF /* AppDelegate.h */,
+				48F82FDC1A56BD220020B8AF /* AppDelegate.m */,
+				48F82FD81A56BD220020B8AF /* Info.plist */,
+				48F82FD91A56BD220020B8AF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48F82FF01A56BD220020B8AF /* TurboMineSweeperAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				48F82FF31A56BD220020B8AF /* TurboMineSweeperAppTests.m */,
+				48F82FF11A56BD220020B8AF /* Supporting Files */,
+			);
+			path = TurboMineSweeperAppTests;
+			sourceTree = "<group>";
+		};
+		48F82FF11A56BD220020B8AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48F82FF21A56BD220020B8AF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48F82FD31A56BD220020B8AF /* TurboMineSweeperApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48F82FF71A56BD220020B8AF /* Build configuration list for PBXNativeTarget "TurboMineSweeperApp" */;
+			buildPhases = (
+				48F82FD01A56BD220020B8AF /* Sources */,
+				48F82FD11A56BD220020B8AF /* Frameworks */,
+				48F82FD21A56BD220020B8AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TurboMineSweeperApp;
+			productName = TurboMineSweeperApp;
+			productReference = 48F82FD41A56BD220020B8AF /* TurboMineSweeperApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48F82FEC1A56BD220020B8AF /* TurboMineSweeperAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48F82FFA1A56BD220020B8AF /* Build configuration list for PBXNativeTarget "TurboMineSweeperAppTests" */;
+			buildPhases = (
+				48F82FE91A56BD220020B8AF /* Sources */,
+				48F82FEA1A56BD220020B8AF /* Frameworks */,
+				48F82FEB1A56BD220020B8AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48F82FEF1A56BD220020B8AF /* PBXTargetDependency */,
+			);
+			name = TurboMineSweeperAppTests;
+			productName = TurboMineSweeperAppTests;
+			productReference = 48F82FED1A56BD220020B8AF /* TurboMineSweeperAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48F82FCC1A56BD210020B8AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Aaryaman Sagar";
+				TargetAttributes = {
+					48F82FD31A56BD220020B8AF = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					48F82FEC1A56BD220020B8AF = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 48F82FD31A56BD220020B8AF;
+					};
+				};
+			};
+			buildConfigurationList = 48F82FCF1A56BD210020B8AF /* Build configuration list for PBXProject "TurboMineSweeperApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48F82FCB1A56BD210020B8AF;
+			productRefGroup = 48F82FD51A56BD220020B8AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48F82FD31A56BD220020B8AF /* TurboMineSweeperApp */,
+				48F82FEC1A56BD220020B8AF /* TurboMineSweeperAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48F82FD21A56BD220020B8AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F82FE31A56BD220020B8AF /* Main.storyboard in Resources */,
+				48F82FE81A56BD220020B8AF /* LaunchScreen.xib in Resources */,
+				48F82FE51A56BD220020B8AF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48F82FEB1A56BD220020B8AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48F82FD01A56BD220020B8AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F82FE01A56BD220020B8AF /* ViewController.m in Sources */,
+				48F82FDD1A56BD220020B8AF /* AppDelegate.m in Sources */,
+				48D182F11A57002000506E71 /* MinesweeperGame.m in Sources */,
+				48F82FDA1A56BD220020B8AF /* main.m in Sources */,
+				484E01EF1A56DBBF001FB72C /* MineMap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48F82FE91A56BD220020B8AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48F82FF41A56BD220020B8AF /* TurboMineSweeperAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48F82FEF1A56BD220020B8AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48F82FD31A56BD220020B8AF /* TurboMineSweeperApp */;
+			targetProxy = 48F82FEE1A56BD220020B8AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48F82FE11A56BD220020B8AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48F82FE21A56BD220020B8AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48F82FE61A56BD220020B8AF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48F82FE71A56BD220020B8AF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48F82FF51A56BD220020B8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48F82FF61A56BD220020B8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48F82FF81A56BD220020B8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TurboMineSweeperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		48F82FF91A56BD220020B8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TurboMineSweeperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		48F82FFB1A56BD220020B8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TurboMineSweeperAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurboMineSweeperApp.app/TurboMineSweeperApp";
+			};
+			name = Debug;
+		};
+		48F82FFC1A56BD220020B8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TurboMineSweeperAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurboMineSweeperApp.app/TurboMineSweeperApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48F82FCF1A56BD210020B8AF /* Build configuration list for PBXProject "TurboMineSweeperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48F82FF51A56BD220020B8AF /* Debug */,
+				48F82FF61A56BD220020B8AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48F82FF71A56BD220020B8AF /* Build configuration list for PBXNativeTarget "TurboMineSweeperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48F82FF81A56BD220020B8AF /* Debug */,
+				48F82FF91A56BD220020B8AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48F82FFA1A56BD220020B8AF /* Build configuration list for PBXNativeTarget "TurboMineSweeperAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48F82FFB1A56BD220020B8AF /* Debug */,
+				48F82FFC1A56BD220020B8AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48F82FCC1A56BD210020B8AF /* Project object */;
+}
