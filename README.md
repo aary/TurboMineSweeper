@@ -7,8 +7,8 @@ Named "TurboMineSweeper" to show the fact that this project was initially progra
 
 <img src = "image.png" height = 400 width = 400*1100/1300>
 <br>
-<br> 
-With an ios version of the app, the game now looks like
+<br> <br>
+With an ios version of the app, the game now looks like<br>
 <img src = "image2.png" height = 400 width = 400*1100/1300>
 
 
